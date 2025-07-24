@@ -30,10 +30,7 @@ class GlobalTextField extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(top: 8),
           decoration: BoxDecoration(
-            border: Border.all(
-              color: const Color(0xFFE31E24),
-              width: 1.5,
-            ),
+            border: Border.all(color: const Color(0xFFE31E24), width: 1.5),
             borderRadius: BorderRadius.circular(6),
             color: Colors.white,
           ),
@@ -91,7 +88,6 @@ class GlobalTextField extends StatelessWidget {
   }
 }
 
-
 class GlobalButton extends StatelessWidget {
   final String text;
   final VoidCallback? onPressed;
@@ -119,27 +115,26 @@ class GlobalButton extends StatelessWidget {
           backgroundColor: const Color(0xFFE31E24),
           foregroundColor: Colors.white,
           elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(6),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         ),
-        child: isLoading
-            ? const SizedBox(
-          height: 20,
-          width: 20,
-          child: CircularProgressIndicator(
-            strokeWidth: 2,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-          ),
-        )
-            : Text(
-          text,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 0.3,
-          ),
-        ),
+        child:
+            isLoading
+                ? const SizedBox(
+                  height: 20,
+                  width: 20,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 2,
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                  ),
+                )
+                : Text(
+                  text,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.3,
+                  ),
+                ),
       ),
     );
   }
@@ -149,11 +144,7 @@ class GlobalLogo extends StatelessWidget {
   final double size;
   final bool isCircular;
 
-  const GlobalLogo({
-    super.key,
-    this.size = 114,
-    this.isCircular = true,
-  });
+  const GlobalLogo({super.key, this.size = 114, this.isCircular = true});
 
   @override
   Widget build(BuildContext context) {
@@ -173,9 +164,10 @@ class GlobalLogo extends StatelessWidget {
         ],
       ),
       child: ClipRRect(
-        borderRadius: isCircular
-            ? BorderRadius.circular(size / 2)
-            : BorderRadius.circular(8),
+        borderRadius:
+            isCircular
+                ? BorderRadius.circular(size / 2)
+                : BorderRadius.circular(8),
         child: Image.asset(
           'assets/atria_logo.jpg',
           width: size,
@@ -192,9 +184,7 @@ class GlobalLogo extends StatelessWidget {
                   Container(
                     width: size * 0.4,
                     height: size * 0.3,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFE31E24),
-                    ),
+                    decoration: const BoxDecoration(color: Color(0xFFE31E24)),
                     child: Icon(
                       Icons.home,
                       color: Colors.white,
@@ -224,10 +214,7 @@ class GlobalLogo extends StatelessWidget {
 class GlobalFeatureTag extends StatelessWidget {
   final String text;
 
-  const GlobalFeatureTag({
-    super.key,
-    required this.text,
-  });
+  const GlobalFeatureTag({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -269,15 +256,15 @@ class GlobalText extends StatelessWidget {
   final TextOverflow? overflow;
 
   const GlobalText(
-      this.text, {
-        super.key,
-        this.s,
-        this.w,
-        this.c,
-        this.align,
-        this.maxLines,
-        this.overflow,
-      });
+    this.text, {
+    super.key,
+    this.s,
+    this.w,
+    this.c,
+    this.align,
+    this.maxLines,
+    this.overflow,
+  });
 
   @override
   Widget build(BuildContext context) {

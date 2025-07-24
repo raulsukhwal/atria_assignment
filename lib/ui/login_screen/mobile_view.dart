@@ -13,7 +13,6 @@ class MobileLoginScreen extends StatefulWidget {
 class _MobileLoginScreenState extends State<MobileLoginScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _phoneController = TextEditingController();
-  final String _selectedCountryCode = '+91';
 
   @override
   void dispose() {
@@ -130,12 +129,17 @@ class _MobileLoginScreenState extends State<MobileLoginScreen> {
                               ),
                               const SizedBox(height: 32),
                               // Phone Input using GlobalPhoneInput
-                             GlobalTextField(controller: _phoneController, label: "Enter Phone Number", hintText: "8209556233"),
+                              GlobalTextField(
+                                controller: _phoneController,
+                                label: "Enter Phone Number",
+                                hintText: "8209556233",
+                              ),
                               const SizedBox(height: 32),
                               // Login Button using GlobalButton
                               GlobalButton(
                                 text: 'Login',
                                 onPressed: () {},
+
                                 ///HERE LOGIN FUNCTION
                                 height: 48,
                               ),

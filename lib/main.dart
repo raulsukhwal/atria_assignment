@@ -17,7 +17,7 @@ class AtriaApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
         primaryColor: const Color(0xFFE31E24),
-        fontFamily: 'Roboto',
+        fontFamily: 'Mulish',
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFFE31E24),
