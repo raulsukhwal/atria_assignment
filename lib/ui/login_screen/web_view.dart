@@ -23,7 +23,6 @@ class _WebLoginScreenState extends State<WebLoginScreen> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -157,7 +156,9 @@ class _WebLoginScreenState extends State<WebLoginScreen> {
                           const SizedBox(height: 32),
                           GlobalButton(
                             text: 'Login',
-                            onPressed: (){},/// HERE OUR LOGIN FUNCTIONALITY
+                            onPressed: () {},
+
+                            /// HERE OUR LOGIN FUNCTIONALITY
                             isLoading: _isLoading,
                           ),
                           const SizedBox(height: 20),
